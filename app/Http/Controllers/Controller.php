@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     
-    // private static $apiToken = '708d9c0cb21ad2cba1ce07631519020719545a10';
+    // private static $apiToken = '<API-token>';
     // private $client;
 
     // public function __construct() {

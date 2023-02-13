@@ -9,7 +9,6 @@
                     <p>{{$subHeader}}</p>
 
                     <a href="{{$herobuttonurl}}" target="_blank" class="main-btn btn-hover">{{$herobuttonlabel}}</a>
-                    <a href="https://buttercms.com/join/" target="_blank">Need an account?</a>
                 </div>
             </div>
             <div class="col-xxl-6 col-xl-6 col-lg-6">
