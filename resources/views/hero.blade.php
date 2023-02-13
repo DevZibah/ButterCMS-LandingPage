@@ -1,8 +1,6 @@
 <!-- File: resources/views/hero.blade.php -->
 
 <section id="{{$scrollanchorid}}" class="hero-section">
-    <h5>hey you</h5>
-    <h4>{{$slug}}</h4>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-10">

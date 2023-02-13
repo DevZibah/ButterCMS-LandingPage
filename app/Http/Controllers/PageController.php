@@ -18,17 +18,15 @@ class PageController extends Controller
 
         $userData = $response->json();
         $data = $userData["data"]["fields"]["body"][1]["fields"];
-        dd($data);
-        // dd($userData["data"]["fields"]["body"][1]["fields"]);
+        // dd($data);
 
         return view('hero', [
-        'header' => $data->getField('header'),
-        'subHeader' => $data->getField('sub-header'),
-        'herobuttonurl' => $data->getField('hero-button_url'),
-        'herobuttonlabel' => $data->getField('hero-button_label'),
-        'heroimage' => $data->getField('hero-image'),
-        'scrollanchorid' => $data->getField('scroll-anchor-id'),
-        'features' => $data->getField('features'),
+            'header' => $data['header'],
+            'subHeader' => $data['sub-header'],
+            'herobuttonurl' => $data['hero-button_url'],
+            'herobuttonlabel' => $data['hero-button_label'],
+            'heroimage' => $data['hero-image'],
+            'scrollanchorid' => $data['scroll-anchor-id'],
         ]);
     }
     
