@@ -1,18 +1,18 @@
 <!-- File: resources/views/features.blade.php -->
 
-<section id="{{$content['scroll_anchor_id']}}" class="feature-section">
+<section id="{{$scrollanchorid}}" class="feature-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-10">
                 <div class="section-title mb-60">
-                    <h2 class="mb-20">{{$content['header']}}</h2>
-                    <p>{{$content['sub-header']}}</p>
+                    <h2 class="mb-20">{{$header}}</h2>
+                    <p>{{$subHeader}}</p>
                 </div>
             </div>
 
             <div class="col-lg-7">
                 <div class="row">
-                    @foreach($content['features'] as $feature)
+                    @foreach($features as $feature)
                         <div class="col-lg-6 col-md-6">
                             <div class="single-feature">
                                 <div class="feature-icon">
