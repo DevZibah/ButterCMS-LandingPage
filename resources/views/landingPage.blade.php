@@ -1,5 +1,18 @@
-<!-- File: resources/views/hero.blade.php -->
+<!-- navmenu-section -->
 
+<ul id="nav" class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="page-scroll" href="/{{$HomeUrl}}">{{$HomeLabel}}</a>
+    </li>
+    <li class="nav-item">
+        <a class="page-scroll" href="/{{$TestimonialUrl}}">{{$TestimonialLabel}}</a>
+    </li>
+    <li class="nav-item">
+        <a class="page-scroll" href="/{{$AboutUrl}}">{{$AboutLabel}}</a>
+    </li>
+</ul>
+
+<!-- Hero-section -->
 <section id="{{$scrollanchorid}}" class="hero-section">
     <div class="container">
         <div class="row align-items-center">
@@ -20,7 +33,7 @@
     </div>
 </section>
 
-<!-- File: resources/views/features.blade.php -->
+<!-- features-section -->
 
 <section id="{{$scrollanchorid}}" class="feature-section">
     <div class="container">
@@ -47,6 +60,45 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- testimonials-section -->
+
+<section id="{{$scroll_anchor_id}}" class="testimonial-section mt-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9">
+                <div class="testimonial-active-wrapper">
+
+                    <div class="section-title text-center">
+                        <h2 class="mb-20">{{$header}}</h2>
+                    </div>
+
+                    <div class="testimonial-active">
+                        @foreach($testimonial_items as $testimonial)
+                            <div class="single-testimonial">
+                                <div class="quote">
+                                    <i class="lni lni-quotation"></i>
+                                </div>
+                                
+                                <div class="hero-image text-center text-lg-end">
+                                    <img src="{{$Image}}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h6>{{$testimonial['FullName']}}</h6>
+                                    <p>{{$testimonial['Occupation']}}</p>
+                                    <div class="content">
+                                        <p>{{$testimonial['content']}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
                 </div>
             </div>
         </div>
