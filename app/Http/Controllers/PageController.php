@@ -17,10 +17,11 @@ class PageController extends Controller
         $Navresponse = Http::get('https://api.buttercms.com/v2/content/nav_menu/?auth_token=708d9c0cb21ad2cba1ce07631519020719545a10');
 
         $navData = $Navresponse->json();
+        $NavHeading = $navData["data"]["nav_menu"][0];
         $Navdata = $navData["data"]["nav_menu"][0]["menu_items"][0];
         $Navdata1 = $navData["data"]["nav_menu"][0]["menu_items"][1];
         $Navdata2 = $navData["data"]["nav_menu"][0]["menu_items"][2];
-        // dd($Navdata2);
+        // dd($NavHeading);
 
 
         $response = Http::get('https://api.buttercms.com/v2/pages/landing-page/home-page/?preview=1&auth_token=708d9c0cb21ad2cba1ce07631519020719545a10');
@@ -33,8 +34,10 @@ class PageController extends Controller
         $TestimonialResponse = Http::get('https://api.buttercms.com/v2/content/testimonial_menu/?auth_token=708d9c0cb21ad2cba1ce07631519020719545a10');
 
         $TestimonialData = $TestimonialResponse->json();
-        $Testdata = $TestimonialData["data"]["testimonial_menu"][0]["testimonial_items"];
-        dd($Testdata);
+        $TestMenu = $TestimonialData["data"]["testimonial_menu"][0];
+        $TestData = $TestimonialData["data"]["testimonial_menu"][0]["testimonial_items"][0];
+        $TestData1 = $TestimonialData["data"]["testimonial_menu"][0]["testimonial_items"][1];
+        // dd($TestMenu);
 
 
         return view('landingPage', [
@@ -50,6 +53,7 @@ class PageController extends Controller
             'scrollanchorid' => $Featuresdata['scroll-anchor-id'],
             'features' => $Featuresdata['features'],
 
+            'NavHeading' => $NavHeading['menu'],
             'HomeLabel' => $Navdata2['label'],
             'HomeUrl' => $Navdata2['url'],
             'TestimonialLabel' => $Navdata['label'],
@@ -57,7 +61,15 @@ class PageController extends Controller
             'AboutLabel' => $Navdata1['label'],
             'AboutUrl' => $Navdata1['url'],
 
-            "testimonial_items" => $Testdata["testimonial_items"],
+            "testimonialMenu" => $TestMenu["testimonial_menu"],
+            "fullname" => $TestData["fullname"],
+            "occupation" => $TestData["occupation"],
+            "content" => $TestData["content"],
+            "image" => $TestData["image"],
+            "fullname1" => $TestData1["fullname"],
+            "occupation1" => $TestData1["occupation"],
+            "content1" => $TestData1["content"],
+            "image1" => $TestData1["image"],
 
         ]);
     }

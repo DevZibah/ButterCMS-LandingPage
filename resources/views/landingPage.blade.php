@@ -1,6 +1,7 @@
 <!-- navmenu-section -->
 
 <ul id="nav" class="navbar-nav ms-auto">
+    <h3>{{$NavHeading}}</h3>
     <li class="nav-item">
         <a class="page-scroll" href="/{{$HomeUrl}}">{{$HomeLabel}}</a>
     </li>
@@ -68,37 +69,42 @@
 
 <!-- testimonials-section -->
 
-<section id="{{$scroll_anchor_id}}" class="testimonial-section mt-100">
+<section class="testimonial-section mt-100">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9">
                 <div class="testimonial-active-wrapper">
 
                     <div class="section-title text-center">
-                        <h2 class="mb-20">{{$header}}</h2>
+                        <h2 class="mb-20">{{$testimonialMenu}}</h2>
                     </div>
 
                     <div class="testimonial-active">
-                        @foreach($testimonial_items as $testimonial)
                             <div class="single-testimonial">
-                                <div class="quote">
-                                    <i class="lni lni-quotation"></i>
-                                </div>
-                                
                                 <div class="hero-image text-center text-lg-end">
-                                    <img src="{{$Image}}" alt="">
+                                    <img src="{{$image}}" alt="">
                                 </div>
                                 <div class="info">
-                                    <h6>{{$testimonial['FullName']}}</h6>
-                                    <p>{{$testimonial['Occupation']}}</p>
+                                    <h6>{{$fullname}}</h6>
+                                    <p>{{$occupation}}</p>
                                     <div class="content">
-                                        <p>{{$testimonial['content']}}</p>
+                                        <p>{{$content}}</p>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                            <div class="single-testimonial">
+                                <div class="hero-image text-center text-lg-end">
+                                    <img src="{{$image1}}" alt="">
+                                </div>
+                                <div class="info">
+                                    <h6>{{$fullname1}}</h6>
+                                    <p>{{$occupation1}}</p>
+                                    <div class="content">
+                                        <p>{{$content1}}</p>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-
                 </div>
             </div>
         </div>
