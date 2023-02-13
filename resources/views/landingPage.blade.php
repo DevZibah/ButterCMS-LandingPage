@@ -1,8 +1,11 @@
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <!-- navmenu-section -->
 
-<ul id="nav" class="navbar-nav ms-auto">
+<section class="nav-sec">
+    <ul id="nav" class="navbar-nav ms-auto">
     <h3>{{$NavHeading}}</h3>
-    <li class="nav-item">
+    <div>
+        <li class="nav-item">
         <a class="page-scroll" href="/{{$HomeUrl}}">{{$HomeLabel}}</a>
     </li>
     <li class="nav-item">
@@ -11,7 +14,9 @@
     <li class="nav-item">
         <a class="page-scroll" href="/{{$AboutUrl}}">{{$AboutLabel}}</a>
     </li>
+    </div>
 </ul>
+</section>
 
 <!-- Hero-section -->
 <section id="{{$scrollanchorid}}" class="hero-section">
