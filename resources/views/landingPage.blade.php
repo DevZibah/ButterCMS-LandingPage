@@ -2,31 +2,30 @@
 <!-- navmenu-section -->
 
 <section class="nav-sec">
-    <ul id="nav" class="navbar-nav ms-auto">
-    <h3>{{$NavHeading}}</h3>
-    <div>
-        <li class="nav-item">
-        <a class="page-scroll" href="/{{$HomeUrl}}">{{$HomeLabel}}</a>
-    </li>
-    <li class="nav-item">
-        <a class="page-scroll" href="/{{$TestimonialUrl}}">{{$TestimonialLabel}}</a>
-    </li>
-    <li class="nav-item">
-        <a class="page-scroll" href="/{{$AboutUrl}}">{{$AboutLabel}}</a>
-    </li>
-    </div>
-</ul>
+        <div>
+            <h3>{{$NavHeading}}</h3>
+        </div>
+        <div class='nav-list'>
+            <li class="nav-item">
+                <a class="page-scroll" href="/{{$HomeUrl}}">{{$HomeLabel}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="page-scroll" href="/{{$TestimonialUrl}}">{{$TestimonialLabel}}</a>
+            </li>
+            <li class="nav-item">
+                <a class="page-scroll" href="/{{$AboutUrl}}">{{$AboutLabel}}</a>
+            </li>
+        </div>
 </section>
 
 <!-- Hero-section -->
 <section id="{{$scrollanchorid}}" class="hero-section">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center d-flex">
             <div class="col-xl-6 col-lg-6 col-md-10">
                 <div class="hero-content">
                     <h1>{{$header}}</h1>
                     <p>{{$subHeader}}</p>
-
                     <a href="{{$herobuttonurl}}" target="_blank" class="main-btn btn-hover">{{$herobuttonlabel}}</a>
                 </div>
             </div>
@@ -46,13 +45,12 @@
         <div class="row">
             <div class="col-lg-5 col-md-10">
                 <div class="section-title mb-60">
-                    <h2 class="mb-20">{{$featuresHeader}}</h2>
-                    <p>{{$featuresSubHeader}}</p>
+                    <h1 class="mb-20">{{$featuresHeader}}</h1>
+                    <h3>{{$featuresSubHeader}}</h3>
                 </div>
             </div>
-
             <div class="col-lg-7">
-                <div class="row">
+                <div class="row feature-flex">
                     @foreach($features as $feature)
                         <div class="col-lg-6 col-md-6">
                             <div class="single-feature">

@@ -17,5 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/', 'App\Http\Controllers\PageController@showLandingPage');
 Route::get('/', 'App\Http\Controllers\PageController@showLandingPage');
