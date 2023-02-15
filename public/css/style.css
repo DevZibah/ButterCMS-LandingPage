@@ -1,3 +1,16 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
 .hero-section {
     border: 1px solid rgb(202, 202, 202);
     background-color: rgb(202, 202, 202);
@@ -26,16 +39,20 @@
 }
 .feature-section {
     border: 3px solid whitesmoke;
+    padding: 2rem;
     margin-top: 2rem;
 }
 .section-title h1,
-.section-title h3 {
+.section-title h3,
+.section-title h2 {
     text-align: center;
 }
 .single-feature {
     border: 1px solid rgb(202, 202, 202);
     background-color: rgb(202, 202, 202);
     text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
 }
 .feature-icon img {
     color: rgb(63, 61, 86);
@@ -53,7 +70,6 @@
 .nav-list li {
     list-style-type: none;
     margin-left: 2rem;
-    margin-top: 1rem !important;
 }
 .nav-list li a {
     text-decoration: none;
@@ -61,4 +77,28 @@
 }
 .nav-list {
     display: flex;
+}
+.testimonial-section {
+    border: 1px solid rgb(202, 202, 202);
+    background-color: rgb(202, 202, 202);
+    margin-top: 3rem;
+    padding: 1rem;
+}
+.testimonial-active {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.test-image img {
+    width: 10%;
+    border-radius: 50%;
+}
+.test-image1 img {
+    width: 15%;
+    height: 30%;
+    border-radius: 50%;
+}
+.single-testimonial {
+    margin-top: 2rem;
+    padding: 1rem;
 }

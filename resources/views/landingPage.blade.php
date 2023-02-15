@@ -77,26 +77,24 @@
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9">
                 <div class="testimonial-active-wrapper">
-
                     <div class="section-title text-center">
                         <h2 class="mb-20">{{$testimonialMenu}}</h2>
                     </div>
-
                     <div class="testimonial-active">
                             <div class="single-testimonial">
-                                <div class="hero-image text-center text-lg-end">
+                                <div class="test-image text-center text-lg-end">
                                     <img src="{{$image}}" alt="">
                                 </div>
                                 <div class="info">
-                                    <h6>{{$fullname}}</h6>
+                                    <h4>{{$fullname}}</h4>
                                     <p>{{$occupation}}</p>
                                     <div class="content">
                                         <p>{{$content}}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-testimonial">
-                                <div class="hero-image text-center text-lg-end">
+                            <div class="single-testimonial1">
+                                <div class="test-image1 text-center text-lg-end">
                                     <img src="{{$image1}}" alt="">
                                 </div>
                                 <div class="info">
