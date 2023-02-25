@@ -11,30 +11,39 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-.hero-section {
+/* .hero-section {
     border: 1px solid rgb(202, 202, 202);
     background-color: rgb(202, 202, 202);
-}
+} */
 .d-flex {
     display: flex;
+    margin-top: 2rem;
 }
 .hero-image img {
-    width: 70% !important;
+    width: 100% !important;
 }
 .hero-content {
     padding: 1rem;
     margin-top: 6rem;
 }
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(163, 14, 14);
+    margin-bottom: 1rem;
+}
 .hero-content p {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    width: 50%;
+    color: gray;
 }
 .hero-content a {
-    border: 1px solid rgb(63, 61, 86);
-    padding: 1rem;
-    width: 6rem;
+    border: 1px solid rgb(163, 14, 14);
+    padding: 0.7rem;
+    width: 20rem;
     text-decoration: none;
     color: white;
-    background-color: rgb(63, 61, 86);
+    background-color: rgb(163, 14, 14);
     border-radius: 10px;
 }
 .feature-section {
@@ -47,20 +56,54 @@ body {
 .section-title h2 {
     text-align: center;
 }
-.single-feature {
-    border: 1px solid rgb(202, 202, 202);
-    background-color: rgb(202, 202, 202);
-    text-align: center;
+.section-title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.single-feature1 {
     margin-top: 2rem;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 .feature-icon img {
-    color: rgb(63, 61, 86);
+    width: 70% !important;
+    margin-left: -6rem;
+    border-radius: 12px;
 }
-.feature-flex {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+.icon1 img {
+    margin-left: -12rem;
+    width: 110% !important;
+}
+.icon2 img {
+    margin-left: 3rem !important;
+    width: 60% !important;
+}
+.feature-content1 h4,
+.feature-content2 h4,
+.feature-content3 h4 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.feature-content1 p,
+.feature-content2 p,
+.feature-content3 p {
+    text-align: center;
+}
+.feature-content1 {
+    margin-left: -12rem;
+    margin-top: 5rem;
+}
+.feature-content2 {
+    margin-left: 7rem;
+    margin-top: 7rem;
+    width: 100%;
+    text-align: center;
+}
+.feature-content3 {
+    margin-top: 7rem;
+    margin-left: -7rem;
 }
 .nav-sec {
     display: flex;

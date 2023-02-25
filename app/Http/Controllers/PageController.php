@@ -29,7 +29,10 @@ class PageController extends Controller
         $userData = $response->json();
         $Herodata = $userData["data"]["fields"]["body"][1]["fields"];
         $Featuresdata = $userData["data"]["fields"]["body"][0]["fields"];
-        // dd($Featuresdata);
+        $Featuresdata1 = $userData["data"]["fields"]["body"][0]["fields"]["features"][0];
+        $Featuresdata2 = $userData["data"]["fields"]["body"][0]["fields"]["features"][1];
+        $Featuresdata3 = $userData["data"]["fields"]["body"][0]["fields"]["features"][2];
+        // dd($Featuresdata1);
 
         $TestimonialResponse = Http::get('https://api.buttercms.com/v2/content/testimonial_menu/?auth_token=708d9c0cb21ad2cba1ce07631519020719545a10');
 
@@ -51,7 +54,15 @@ class PageController extends Controller
             'featuresHeader' => $Featuresdata['features-header'],
             'featuresSubHeader' => $Featuresdata['features-sub-header'],
             'scrollanchorid' => $Featuresdata['scroll-anchor-id'],
-            'features' => $Featuresdata['features'],
+            'header1' => $Featuresdata1['header'],
+            'description1' => $Featuresdata1['description'],
+            'icon1' => $Featuresdata1['icons'],
+            'header2' => $Featuresdata2['header'],
+            'description2' => $Featuresdata2['description'],
+            'icon2' => $Featuresdata2['icons'],
+            'header3' => $Featuresdata3['header'],
+            'description3' => $Featuresdata3['description'],
+            'icon3' => $Featuresdata3['icons'],
 
             'NavHeading' => $NavHeading['menu'],
             'HomeLabel' => $Navdata2['label'],

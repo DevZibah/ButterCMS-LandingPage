@@ -50,20 +50,32 @@
                 </div>
             </div>
             <div class="col-lg-7">
-                <div class="row feature-flex">
-                    @foreach($features as $feature)
-                        <div class="col-lg-6 col-md-6">
-                            <div class="single-feature">
-                                <div class="feature-icon">
-                                    <img src="{{$feature['icons']}}" alt="" />
-                                </div>
-                                <div class="feature-content">
-                                    <h4>{{$feature['header']}}</h4>
-                                    <p>{{$feature['description']}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                <div class="single-feature1">
+                    <div class="feature-icon">
+                        <img src="{{$icon1}}" alt="" />
+                    </div>
+                    <div class="feature-content1">
+                        <h4>{{$header1}}</h4>
+                        <p>{{$description1}}</p>
+                    </div>
+                </div>
+                <div class="single-feature1">
+                    <div class="feature-content2">
+                        <h4>{{$header2}}</h4>
+                        <p>{{$description2}}</p>
+                    </div>
+                    <div class="feature-icon icon1">
+                        <img src="{{$icon2}}" alt="" />
+                    </div>
+                </div>
+                <div class="single-feature1">
+                    <div class="feature-icon icon2">
+                        <img src="{{$icon3}}" alt="" />
+                    </div>
+                    <div class="feature-content3">
+                        <h4>{{$header3}}</h4>
+                        <p>{{$description3}}</p>
+                    </div>
                 </div>
             </div>
         </div>
