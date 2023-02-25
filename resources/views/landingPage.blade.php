@@ -110,7 +110,7 @@
                                     <img src="{{$image1}}" alt="">
                                 </div>
                                 <div class="info">
-                                    <h6>{{$fullname1}}</h6>
+                                    <h4>{{$fullname1}}</h4>
                                     <p>{{$occupation1}}</p>
                                     <div class="content">
                                         <p>{{$content1}}</p>
